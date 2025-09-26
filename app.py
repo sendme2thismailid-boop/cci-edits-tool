@@ -4,7 +4,7 @@ import pandas as pd
 # --- Load and Build Index Once ---
 @st.cache_resource
 def build_index():
-    FILE = "/Users/parthibansrinivasan/Documents/cci_app/CCI_Edits.parquet"
+    FILE = "CCI_Edits.parquet"
     raw = pd.read_parquet(FILE, engine="pyarrow")
     raw = raw.astype(str)
 
